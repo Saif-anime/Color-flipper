@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        /* css reset  */
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .color_box{
+         display: flex;   
+         justify-content: center;
+         align-items: center;
+         background-color: black;
+         color: white;
+         padding: 10px 20px;
+        }
+        .color_box span{
+            font-size: 2rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+        button{
+            margin-top: 30px;
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="color_box">
+        <h1>Background Color:</h1>
+        <span id="text">Red</span>
+    </div>
+    <button>Click me</button>
+</body>
+<!-- internal js  -->
+<script>
+
+// add event use 
+var btn = document.querySelector("button");
+
+btn.addEventListener('click', function(){
+    var color_arr = ['red', 'green', 'purple', 'yellow', 'black'];
+    var i = Math.floor(Math.random()*color_arr.length)
+    var body = document.querySelector('body');
+    body.style.backgroundColor = color_arr[i];
+    var text = document.getElementById('text')
+
+    text.style.color = color_arr[i];
+    text.innerText = color_arr[i];
+})
+//  task 1 
+
+// apko 2 button banane hai 
+
+
+
+
+
+
+
+
+
+
+    // alert("hello world")
+    // prompt('welcome to our javascript !')
+    // confirm('Are you form submit !');
+
+    // var a = alert("hello world")
+    // document.write(a)
+    // alert function always just return undifined value
+
+
+    // var p = prompt("Enter the value1");
+    // var p1 = parseInt(prompt("enter the value 2"));
+    // document.write(typeof(p, p1))
+    // prompt function always just return string value
+</script>
+<!-- external js  -->
+<script src="main.js"></script>
+</html>
